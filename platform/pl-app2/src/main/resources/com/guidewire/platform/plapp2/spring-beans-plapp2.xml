@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <import resource="classpath:/com/guidewire/commons/handy/spring-beans-handy-util.xml"/>
+    <import resource="classpath:/com/guidewire/commons/nifty/spring-beans-nifty-util.xml"/>
+
+    <bean id="plApp2" class="com.guidewire.platform.plapp2.PlApp2">
+        <constructor-arg index="0" ref="handyUtilBean"/>
+        <constructor-arg index="1" ref="niftyUtilBean"/>
+    </bean>
+
+</beans>

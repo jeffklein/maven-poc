@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	
+	<parent>
+		<groupId>com.guidewire.platform</groupId>
+		<artifactId>guidewire-platform</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
+	<groupId>com.guidewire.platform</groupId>
+	<artifactId>guidewire-platform-pl-app1</artifactId>
+	<packaging>jar</packaging>
+    <modelVersion>4.0.0</modelVersion>
+	<name>Guidewire::Platform::Application 1::${project.version}</name>
+
+    <!-- notice: no version numbers in sub-pom. versions are all in higher level poms
+        (but could be overridden here in a pinch) -->
+	<dependencies>
+        <dependency>
+			<groupId>com.guidewire.commons</groupId>
+			<artifactId>guidewire-commons-handy-util</artifactId>
+		</dependency>
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+        </dependency>
+	</dependencies>
+</project>

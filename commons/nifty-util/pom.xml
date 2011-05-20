@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	
+	<parent>
+		<groupId>com.guidewire.commons</groupId>
+		<artifactId>guidewire-commons</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
+	<groupId>com.guidewire.commons</groupId>
+	<artifactId>guidewire-commons-nifty-util</artifactId>
+	<packaging>jar</packaging>
+    <modelVersion>4.0.0</modelVersion>
+	<name>Guidewire::Commons::Nifty Utility::${project.version}</name>
+
+    <!-- notice: no version numbers in sub-pom. versions are all in the top-level pom
+        (but could be overridden here in a pinch) -->
+	<dependencies>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+        </dependency>
+	</dependencies>
+</project>

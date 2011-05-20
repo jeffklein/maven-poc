@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	
+	<parent>
+		<groupId>com.guidewire</groupId>
+		<artifactId>guidewire-master-pom</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.guidewire.platform</groupId>
+	<artifactId>guidewire-platform</artifactId>
+	<packaging>pom</packaging>
+	<name>Guidewire::Platform::${project.version}</name>
+
+    <modules>
+        <module>pl-app1</module>
+        <module>pl-app2</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.guidewire.commons</groupId>
+                <artifactId>guidewire-commons-handy-util</artifactId>
+                <version>${gw.platform.commons.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.guidewire.commons</groupId>
+                <artifactId>guidewire-commons-nifty-util</artifactId>
+                <version>${gw.platform.commons.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <properties>
+        <gw.platform.commons.version>1.0-SNAPSHOT</gw.platform.commons.version>
+    </properties>
+</project>
