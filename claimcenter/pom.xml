@@ -15,7 +15,7 @@
     <modules>
         <module>cc-webapp</module>
     </modules>
-
+    <!-- dependencies -->
     <dependencyManagement>
         <dependencies>
             <dependency>
