@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 /**
  * Test the Nifty utility
  */
-@Test
+@Test(groups = {"unit"})
 @ContextConfiguration(locations = "classpath:/com/guidewire/commons/handy/spring-beans-handy-util.xml")
 public class HandyUtilTest extends AbstractTestNGSpringContextTests {
 

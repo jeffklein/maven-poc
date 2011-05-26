@@ -20,7 +20,7 @@ public class NiftyUtilTest extends AbstractTestNGSpringContextTests {
   @Qualifier("niftyUtilBean")
   private NiftyUtil niftyUtil = null;
 
-  @Test
+  @Test(groups={"unit"})
   public void testNiftyUtil() {
     int length = niftyUtil.determineLength("Ain't this string nifty the first time?");
     logger.info(length);
@@ -28,7 +28,7 @@ public class NiftyUtilTest extends AbstractTestNGSpringContextTests {
     Assert.assertNotNull(length);
   }
 
-  @Test
+  @Test(groups={"functional"})
   public void testNiftyUtil10Times() {
     for (int i = 1; i <= 10; i++) {
       String in = "See, its still nifty even inside a loop! " + i;

@@ -65,6 +65,7 @@
                 <version>2.4.2</version>
                 <configuration>
                     <forkMode>never</forkMode>
+                    <groups>${surefire.test.groups.default}</groups>
                 </configuration>
             </plugin>
             <!-- Package source to JAR to upload to repo-->
@@ -94,6 +95,9 @@
                      <goals>
                         <goal>jar</goal>
                      </goals>
+                      <configuration>
+                          <quiet>true</quiet>
+                      </configuration>
                   </execution>
                </executions>
             </plugin>
@@ -190,6 +194,95 @@
         <log4j.version>1.2.16</log4j.version>
         <commons.logging.version>1.0.4</commons.logging.version>
         <spring.version>2.5.6</spring.version>
+        <surefire.test.groups.default>unit</surefire.test.groups.default>
     </properties>
+
+    <profiles>
+        <!-- use this profile to run unit tests -->
+        <profile>
+            <id>unit</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.4.2</version>
+                        <configuration>
+                            <groups>unit</groups>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <!-- use this profile to run integration tests -->
+        <profile>
+            <id>integration</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.4.2</version>
+                        <configuration>
+                            <groups>integration</groups>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <!-- use this profile to run functional tests -->
+        <profile>
+            <id>functional</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.4.2</version>
+                        <configuration>
+                            <groups>functional</groups>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <!-- use this profile to run the tests that take a lot of time to run-->
+        <profile>
+            <id>long-running</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.4.2</version>
+                        <configuration>
+                            <groups>functional,integration</groups>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <!-- use this profile to run the tests that take a lot of time to run-->
+        <profile>
+            <id>all</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.4.2</version>
+                        <configuration>
+                            <groups>functional,integration,unit</groups>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+    </profiles>
 
 </project>

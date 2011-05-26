@@ -8,7 +8,7 @@ import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-@Test
+@Test(groups={"integration"})
 @ContextConfiguration(locations = "classpath:/com/guidewire/platform/plapp1/spring-beans-plapp1.xml")
 public class PlApp1Test extends AbstractTestNGSpringContextTests {
 
@@ -21,5 +21,10 @@ public class PlApp1Test extends AbstractTestNGSpringContextTests {
     for (int i = 0 ; i < 10 ;i++) {
       new Thread(plApp1).start();
     }
+  }
+
+  @Test(groups={"unit"})
+  public void someNoOpUnitTest() {
+    logger.info("useless test with no assertions");
   }
 }

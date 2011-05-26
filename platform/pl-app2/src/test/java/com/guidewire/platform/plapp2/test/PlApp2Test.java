@@ -8,7 +8,7 @@ import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-@Test
+@Test(groups = {"functional"})
 @ContextConfiguration(locations = "classpath:/com/guidewire/platform/plapp2/spring-beans-plapp2.xml")
 public class PlApp2Test extends AbstractTestNGSpringContextTests {
 
