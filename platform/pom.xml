@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>com.guidewire</groupId>
 		<artifactId>guidewire-master-pom</artifactId>
-		<version>1.0-SNAPSHOT</version>
+		<version>1.0</version>
 	</parent>
 	
 	<modelVersion>4.0.0</modelVersion>
@@ -33,6 +33,6 @@
     </dependencyManagement>
 
     <properties>
-        <gw.platform.commons.version>1.0-SNAPSHOT</gw.platform.commons.version>
+        <gw.platform.commons.version>1.0</gw.platform.commons.version>
     </properties>
 </project>
