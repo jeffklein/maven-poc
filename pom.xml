@@ -10,9 +10,9 @@
     <url>http://maven.apache.org</url>
 
     <scm>
-        <connection>scm:git:git://github.com/jeffklein/maven-poc</connection>
-        <url>scm:git:git://github.com/jeffklein/maven-poc</url>
-        <developerConnection>scm:git:git://github.com/jeffklein/maven-poc</developerConnection>
+        <connection>scm:git:git@github.com:jeffklein/maven-poc</connection>
+        <url>scm:git:git@github.com:jeffklein/maven-poc</url>
+        <developerConnection>scm:git:git@github.com:jeffklein/maven-poc</developerConnection>
     </scm>
 
     <prerequisites>
