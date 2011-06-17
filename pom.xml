@@ -5,14 +5,14 @@
     <groupId>com.guidewire</groupId>
     <artifactId>guidewire-master-pom</artifactId>
     <packaging>pom</packaging>
-    <version>1.0</version>
+    <version>1.0-SNAPSHOT</version>
     <name>Guidewire::${project.version}</name>
     <url>http://maven.apache.org</url>
 
     <scm>
-        <connection>scm:git:git@github.com:jeffklein/maven-poc</connection>
-        <url>scm:git:git@github.com:jeffklein/maven-poc</url>
-        <developerConnection>scm:git:git@github.com:jeffklein/maven-poc</developerConnection>
+        <connection>scm:git:git://github.com/jeffklein/maven-poc</connection>
+        <url>scm:git:git://github.com/jeffklein/maven-poc</url>
+        <developerConnection>scm:git:git://github.com/jeffklein/maven-poc</developerConnection>
     </scm>
 
     <prerequisites>
