@@ -5,7 +5,7 @@
     <groupId>com.guidewire</groupId>
     <artifactId>guidewire-master-pom</artifactId>
     <packaging>pom</packaging>
-    <version>1.1</version>
+    <version>1.2-SNAPSHOT</version>
     <name>Guidewire::${project.version}</name>
     <url>http://maven.apache.org</url>
 
